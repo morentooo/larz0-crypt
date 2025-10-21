@@ -1,0 +1,81 @@
+<form class="form" name="form">
+    <div>
+        <label>Time:</label>
+        <input 
+            id="input_time" 
+            type="time" 
+            name="time" 
+            placeholder="12:34">
+    </div>
+    
+    <div>
+        <label>Battery:</label>
+        <select name="battery">
+            <option value='10'>10</option>
+            <option value='50'>50</option>
+            <option value='90'>90</option>
+        </select>
+        <label>%</label>
+    </div>
+
+    <div>
+        <label>Coin:</label>
+        <input 
+            type = "text" 
+            name = "coin" 
+            placeholder = "BTC"
+            onchange = "updateVariable('coin')"
+        >
+        <label>USDT</label>
+    </div>
+    
+    <div>
+        <label>Position:</label>
+        <select name="longshort">
+            <option value='Long'>Long</option>
+            <option value='Short'>Short</option>
+        </select>
+    </div>
+
+    <div>
+        <label>Leverage:</label>
+        <input 
+            type = "text"
+            name = "leverage" 
+            placeholder = "50"
+            maxlength = "2"
+            onchange = "updateVariable('leverage')"
+        >
+        <label>.00x</label>
+    </div>
+
+    <div>
+        <label>Entry price:</label>
+        <input 
+            type = "text"
+            name = "entry_price" 
+            placeholder = "1,234.56"
+            onchange = "updateVariable('entry_price')"
+        />
+    </div>
+        
+    <div>
+        <label>Margin:</label>
+        <input 
+            type = "text" 
+            name = "margin" 
+            placeholder = "1,234.56"
+            onchange = "updateVariable('margin')"
+        >
+    </div>
+        
+    <div>
+        <label>Liq. price:</label>
+        <input type="text" name="liq_price" placeholder="1,234.56">
+    </div>
+        
+    <div>
+        <label>Take Profit:</label>
+        <input type="text" name="take_profit" placeholder="1,234.56">
+    </div>
+</form>

@@ -1,0 +1,69 @@
+<form class="form" name="form">
+    <div>
+        <label>Type:</label>
+        <select name="template_type">
+            <option value='roi'>ROI (%)</option>
+            <option value='pnl'>PnL (usd)</option>
+        </select>
+    </div>
+    
+    <div>
+        <label>Coin:</label>
+        <input 
+            type="text" 
+            name="coin" 
+            value="" 
+            placeholder="BTC"
+            onchange = "updateVariable('coin')"
+        >
+        <label>USDT</label>
+    </div>
+    
+    <div>
+        <label>Position:</label>
+        <select name="option">
+            <option value='Long'>Long</option>
+            <option value='Short'>Short</option>
+        </select>
+    </div>
+    
+    <div>
+        <label>Leverage:</label>
+        <input 
+            type="text" 
+            name="leverage" 
+            value="" 
+            placeholder="50"
+            maxlength="2"
+            onchange = "updateVariable('leverage')"
+        >
+        <label>.0X</label>
+    </div>
+    
+    <div>
+        <label>Entry price:</label>
+        <input
+            type="text" 
+            name="entry_price" 
+            value="" 
+            placeholder="1,234.56"
+            onchange = "updateVariable('entry_price')"
+        >
+    </div>
+
+    <div>
+        <label>Exit price:</label>
+        <input type="text" name="exit_price" value="" placeholder="1,234.56">
+    </div>
+        
+    <div>
+        <label>Margin:</label>
+        <input 
+            type="text" 
+            name="margin" 
+            value="1" 
+            placeholder="1,234.56"
+            onchange = "updateVariable('margin')"
+        >
+    </div>
+</form>

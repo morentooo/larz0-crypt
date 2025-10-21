@@ -1,0 +1,142 @@
+body {
+    overflow: hidden;
+}
+
+
+/* тествый шаблон для подгонки */
+.iphone_screen {
+    background-image: url("../images/coin/test.png");
+}
+
+
+
+.web3_page {
+    font-family: "IBM Plex Sans", sans-serif;
+}
+
+
+
+
+.total_balance {
+    position: absolute;
+    top: 615px;
+    left: 50px;
+    font-size: 86px;
+    font-weight: 600;
+    letter-spacing: 1;
+}
+
+
+
+.icon {
+    position: absolute;
+    left: 49px;
+    border-radius: 50%;
+}
+.bnb_icon {
+    width: 96px;
+    height: 96px;
+    top: 1620px;
+    background: url('../images/icons/bnb-logo.png') no-repeat center/cover;
+}
+.icon::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    right: 1px;
+    width: 34px;
+    height: 34px;
+    background: url('../images/icons/bnb-logo.png') no-repeat center/cover;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+.coin_icon {
+    width: 95px;
+    height: 95px;
+    top: 1789px;
+    border: 2px solid #71757A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    font-size: 45px;
+    font-weight: 700;
+}
+
+
+
+
+.name {
+    position: absolute;
+    left: 168px;
+    font-size: 39px;
+    letter-spacing: 0.75;
+    font-weight: 500;
+}
+.bnb_name { 
+    top: 1620px;
+}
+.coin_name { 
+    top: 1787px;
+}
+
+
+.quantity {
+    position: absolute;
+    right: 48px;
+    font-size: 39px;
+    letter-spacing: 0.45;
+}
+.bnb_quantity {
+    top: 1620px;
+}
+.coin_quantity { 
+    top: 1787px;
+    
+}
+
+.amount {
+    position: absolute;
+    right: 48px;
+    font-size: 29px;
+    font-weight: 400;
+    letter-spacing: 0.5;
+    color: #71757A;
+}
+.bnb_amount {
+    top: 1680px;
+}
+.coin_amount { 
+    top: 1848px;
+}
+
+
+
+.price_string { 
+    position: absolute;
+    left: 168px;
+    font-size: 29px;
+    font-weight: 400;
+    letter-spacing: 0.45;
+}
+.bnb_price_string {
+    top: 1683px;
+}
+.coin_price_string {
+    top: 1851px;
+}
+.price {
+    color: #71757A;
+}
+
+
+
+.profit { 
+    margin-left: 5px;
+    color: #20B26C;
+}
+
+
+
+

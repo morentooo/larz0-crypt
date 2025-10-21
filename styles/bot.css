@@ -1,0 +1,222 @@
+body {
+    overflow: hidden;
+}
+
+
+
+/* Параметры экрана компьютера (для скринов бота) */
+.bot_screen {
+    position: relative;
+    float: none;
+    top: 150vh;
+    width: 1500px;
+    height: 1000px;
+    background-position: center;
+    background-image: url("../images/bot/dashboard-test.png");
+}
+
+.bot_screen_dashboard, 
+.bot_screen_settings{
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.bot_screen_dashboard.current, 
+.bot_screen_settings.current {
+    display: block;
+}
+
+.generate_id_btn {
+    margin: 2px 0 0 10px;
+    padding: 2px 5px;
+    border: 1px solid orange;
+    border-radius: 5px;
+}
+
+.generate_id_btn:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+
+
+/* Таблица инпутов для ввода данных о трейдах */
+.form_table th {
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+.form_table tr td:nth-child(1), 
+.form_table tr td:nth-child(4){
+    padding-right: 5px;
+}
+
+/* отступ между строками таблицы в форме  */
+.form_table tr:not(:last-child) td {
+    padding-bottom: 10px;
+}
+
+.form_table button {
+    padding: 4px 5px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.form_table button:hover {
+    background-color: orange;
+    color: #000;
+}
+
+@media (prefers-color-scheme: light) {
+    .form_table button {
+        background-color: #202020;
+        color: #fff;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .form_table button {
+        background-color: #FAFAFA;
+        color: #000;
+    }
+}
+
+
+
+/* Позиционирование элементов на скрине ДЕШБОРДА */
+.selected_id_dashboard, 
+.period, 
+.balance, 
+.available, 
+.withdraw_date, 
+.total_profit, 
+.table {
+    position: absolute;
+    color: #fff;
+    font-weight: 700;
+}
+
+.selected_id_dashboard {
+    top: 308px;
+    left: 417px;
+    color: #000;
+    font-size: 30px;
+}
+
+.table {
+    top: 370px;
+    left: 805px;
+    font-size: 28px;
+}
+
+/* отступ между строками таблицы на скрине */
+.table tr:not(:last-child) td {
+    padding-bottom: 18px;
+}
+
+/* Даты */
+.table tr > td:nth-child(1) {
+    width: 90px;
+    color: #fff;
+    font-weight: 200;
+    font-style: italic;
+}
+
+/* Трейды  */
+.table tr > td:nth-child(2) {
+    padding-right: 30px;
+    color: #C08AFF;
+    font-weight: 700;
+}
+
+/* Надпись "TOTAL" */
+.table tr > td:nth-child(3) {
+    padding-right: 5px;
+    color: #fff;
+    font-style: italic;
+    font-weight: 300;
+}
+
+/* Проценты */
+.table tr > td:nth-child(4) {
+    padding-right: 25px;
+    color: #C08AFF;
+    font-weight: 700;
+}
+
+/* Профиты */
+.table tr > td:nth-child(5) {
+    color: #00FFE3;
+    font-weight: 700;
+    font-style: italic;
+    text-align: right;
+}
+
+.period {
+    top: 250px;
+    left: 1020px;
+    font-size: 40px;
+}
+
+.balance, 
+.available, 
+.withdraw_date {
+    font-size: 30px;
+}
+
+.balance {
+    top: 538px;
+    left: 380px;
+}
+
+.available {
+    top: 538px;
+    left: 563px;
+}
+
+.withdraw_date {
+    top: 675px;
+    left: 380px;
+}
+
+.total_profit {
+    top: 775px;
+    left: 945px;
+    color: #00FFE3;
+    font-size: 60px;
+    font-style: italic;
+}
+
+
+
+/* Позиционирование элементов на скрине НАСТРОЕК */
+.selected_id_settings, 
+.deposit_address, 
+.withdrawal_address {
+    position: absolute;
+}
+
+.selected_id_settings {
+    top: 324px;
+    right: 150px;
+    font-size: 30px;
+    font-weight: 100;
+}
+
+.deposit_address {
+    top: 462px;
+    left: 484px;
+    color: #000;
+    font-size: 25px;
+}
+
+.withdrawal_address {
+    top: 604px;
+    left: 484px;
+    color: #000;
+    font-size: 25px;
+}

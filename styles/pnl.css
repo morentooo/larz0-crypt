@@ -1,0 +1,90 @@
+body {
+    overflow: hidden;
+}
+
+
+
+.pnl {
+    position: relative;
+    top: 150vh;
+    width: 960px;
+    height: 1080px;
+    box-sizing: border-box;
+    background-image: url("../images/pnl/work/roi2.png");
+    background-position: center;
+}
+   
+.pnl_content {
+    width: 100%;
+    height: 100%;
+    padding: 230px 0 0 60px;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.pnl_content > span {
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+
+.pnl_header {
+    display: flex; 
+    height: 34px;
+    align-items: flex-start;
+}
+
+
+.coin_name {
+    display: inline-block;
+    color: #ffffff;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 50px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.leverage {
+    display: inline-block;
+    margin: 8px 0 0 22px;
+    padding: 2px 15px;
+    background-color: rgba(57, 255, 20, 0.1);;
+    border-radius: 15px;
+    color: #52B189;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 25px;
+    line-height: 50px;
+}
+
+.roipnl {
+    margin-top: 113px;
+    color: #14B56F;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 90px;
+    font-weight: 500;
+}
+
+.entry_price, 
+.exit_price {
+    color: #ffffff;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 41px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.entry_price {
+    margin-top: 89px;
+}
+
+.exit_price {
+    margin-top: 68px;
+}
+
+.position_size {
+    color: #DC5350;;
+}
+
+.liq_price {
+    color: orange;
+}

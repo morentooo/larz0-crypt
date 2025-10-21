@@ -1,0 +1,409 @@
+/* Общие параметры */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-style: normal;
+}
+
+a { 
+  text-decoration: none;
+}
+
+h1 {
+    font-family: Arial;
+}
+
+input, select {
+    all: unset;
+    margin-left: 0px;
+    color: black;
+    font-size: 18px;
+}
+
+select {
+    float: left;
+    height: 25px;
+    padding: 0 7px 0 5px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    font-weight: 500;
+    line-height: 25px;
+    background-color: #b1c3d5;
+}
+
+input {
+    float: left;
+    height: 25px;
+    padding: 2px 5px;
+    border-radius: 5px;
+    font-weight: 500;
+    line-height: 25px;
+    background-color: #b1c3d5;
+    color: #000;
+}
+
+input::placeholder {
+    color: gray;
+}
+
+input:focus {
+    border-color: #fea501;
+}
+
+button {
+    all: unset;
+}
+
+body {
+    background-color: #19222e;
+}
+input, select{
+    border: 1px solid #fff;
+}
+a, table {
+    color: #fff;
+}
+
+
+
+/* Скелет приложения */
+.container {
+    position: absolute;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    font-family: "Roboto", sans-serif;
+}
+
+.app_left, 
+.app_right {
+    height: 100%;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.app_left {
+    width: max-content;
+    max-width: 100%;
+    min-width: 283px;
+    min-height: 213px;
+    margin: 0 20px;
+}
+
+.app_right {
+    width: 200px;
+}
+
+.container {
+    color: #fff;
+}
+.app_left, .app_center, .app_right {
+    background-color: #203041;
+}
+
+
+
+/* Главное меню */
+.menu {
+    float: left;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center; 
+    border-radius: 10px;
+    font-family: Arial;
+}
+
+.menu_btn {
+    width: 100%;
+    padding: 15px 0;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+.menu_btn:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.menu_btn:hover {
+    background-color: #FAFAFA;
+}
+
+.menu_btn.current {
+    background-color: orange;
+    color: #101010;
+}
+
+.menu_btn.current {
+    background-color: orange;
+}
+
+.menu_btn:hover {
+    background-color: #0F0F0F;
+    color: #fff;
+}
+
+
+/* Форма ввода значений */
+.form,
+.form_bot, 
+.form_withdrawal,
+.waxp_form_withdraw, 
+.waxp_form_progress {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    width: 100%;
+    margin-block-end: 0;
+}
+
+.form_bot, 
+.waxp_form_withdraw,
+.waxp_form_progress,
+.form_withdrawal {
+    display: none;
+}
+
+.form_bot.current,
+.waxp_form_withdraw.current,
+.waxp_form_progress.current,
+.form_withdrawal.current {
+    display: flex !important;
+}
+
+.form > div:not(:last-child), 
+.form > div > div:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.form > div > label:nth-child(1),
+.form > div > div > label:nth-child(1) {
+    float: left;
+    padding-right: 10px;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.form > div > label:nth-child(3), 
+.form > div > div > label:nth-child(3) {
+    float: left;
+    height: 29px;
+    padding-left: 5px;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 30px;
+}
+
+
+
+/* Кнопки управления справа от полей ввода */
+#layoutSelector {
+    width: calc(100%-20px);
+    margin-bottom: 30px;
+    float: right;
+}
+
+
+.form_buttons {
+    display: flex;
+    flex-direction: column;  
+    width: 100%;
+}
+
+.form_buttons label {
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.get_ss_btn, 
+.clear_form_btn {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border-radius: 10px;
+    font-weight: 500;
+    text-align: center;
+    font-size: 16px;
+    line-height: 45px;
+    letter-spacing: 0.5px;
+}
+
+.get_ss_btn {
+    background-color: orange;
+    color: #000;
+}
+
+.get_ss_btn:hover, 
+.clear_form_btn:hover {
+    background-color: orangered;
+    color: #fff;
+}
+
+.clear_form_btn {
+    background-color: #FAFAFA;
+    color: #000;
+}
+
+
+
+/* Блок для вывода предварительных расчетов */
+.calculation_results {
+    width: 100%;
+}
+
+.calculation_results > span {
+    display: block;
+    font-weight: 500;
+}
+
+
+
+/* Кнопка ввода текущего времени в поле ввода формы */
+.set_current_time_btn {
+    float: left;
+    height: 30px;
+    margin-left: 10px;
+    padding: 0 7px 0 5px;
+    border-radius: 5px;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.set_current_time_btn:hover {
+    background-color: orange;
+    color: #000;
+}
+
+
+.set_current_time_btn {
+    background-color: #0F0F0F;
+    color: #fff;
+}
+
+
+
+
+
+.section_select {
+    border-radius: 10px;
+    padding: 5px 10px;
+    display: flex;
+}
+.section_select > label {
+    height: 27px;
+    line-height: 29px;
+}
+.section_select {
+    background-color: #19222e;
+}
+
+
+
+
+/* ---- ДЛИНА ИНПУТОВ В ФОРМЕ ---- */
+
+[name = "leverage"] {
+    width: 30px;
+}
+
+[name="network_fee"],
+.bot_form_input,
+[name = "progress_percentage"] {
+    width: 50px;
+}
+
+[type="time"] {
+    width: 90px;
+}
+
+[name = "selected_id"],
+[name = "balance"], 
+[name="prev_total_profit"],
+[name = "profit"] {
+    width: 70px;
+}
+
+[name = "selected_id_dashboard"], 
+[name = "selected_id_settings"],
+[name = "balance"] {
+    width: 80px;
+}
+
+[name = "coin"],
+[name = "coin_name"] {
+    width: 85px;
+}
+
+[name = "funding"], 
+[name = "trading"], 
+[name = "derivatives"], 
+[name="withdraw_date"] {
+    width: 90px;
+}
+
+[name = "withdraw_time"] {
+    width: 110px;
+}
+
+[name = "withdraw_date"] {
+    width: 120px;
+}
+
+[name="entry_price"], 
+[name="margin"], 
+[name="liq_price"], 
+[name="take_profit"], 
+[name="exit_price"] {
+    width: 150px;
+}
+
+
+/* параметры экрана айфона (для позы, баланса, вывода, waxp) */
+.iphone_screen {
+    position: relative;
+    top: 1000px;
+    float: none;
+    width: 1170px;
+    height: 2532px;
+    box-sizing: border-box;
+    background-position: center;
+    color: #fff;
+}
+
+.iphone_time {
+    position: absolute;
+    top: 47px;
+    left: 193px;
+    transform: translateX(-50%);
+    font-family: "Inter", sans-serif !important;
+    font-size: 50px;
+    letter-spacing: 0px;
+    font-weight: 500;
+}
+
+.iphone_icons {
+    position: absolute;
+    top: 52px;
+    right: 70px;
+    width: 250px;
+    height: 47px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../images/icons/50.png);
+    background-size: contain;
+}

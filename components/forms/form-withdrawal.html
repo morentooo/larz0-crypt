@@ -1,0 +1,82 @@
+<form class="form" name="form">
+    <!-- Выбор необходимого варианта скрина -->
+    <div class="section_select withdrawal_section_select">
+        <label>Withdrawal section:</label>
+        <select 
+            name="withdrawal_section" 
+            onchange="changeWithdrawalSection()"
+        >
+            <option value='form'>Form</option>
+            <option value='transaction'>Transaction Details</option>
+        </select>
+    </div>
+
+    <!-- Общие поля ввода для обоих вариантов скринов -->
+    <div>
+        <label>Time:</label>
+        <input id="input_time" type="time" name="time" value="" placeholder="12:34">
+    </div>
+    
+    <div>
+        <label>Battery:</label>
+        <select name="battery">
+            <option value='10'>10</option>
+            <option value='50'>50</option>
+            <option value='90'>90</option>
+        </select>
+        <label>%</label>
+    </div>
+
+    <div>
+        <label>Address:</label>
+        <input TYPE="text" name="address" value="" placeholder="">
+    </div>
+        
+    <div>
+        <label>Withdraw amount:</label>
+        <input TYPE="text" name="amount" value="" placeholder="1234.56">
+        <label>USDT</label>
+    </div>
+
+    <div>
+        <label>Network Fee:</label>
+        <input TYPE="text" name="network_fee" value="" placeholder="2">
+        <label>USDT</label>
+    </div>
+
+    <!-- Поля ввода для скрина формы вывода -->
+    <div class="form_withdrawal current" id="form_withdrawal_form">
+        <div>
+            <label>Minimum:</label>
+            <input TYPE="text" name="minimum" value="" placeholder="1234.56">
+            <label>USDT</label>
+        </div>
+
+        <div>
+            <label>Available:</label>
+            <input TYPE="text" name="available" value="" placeholder="1234.56">
+            <label>USDT</label>
+        </div>
+    </div>
+
+    <!-- Поля ввода для скрина деталей транзакции -->
+    <div class="form_withdrawal" id="form_withdrawal_transaction">
+        <div>
+            <label>Txid:</label>
+            <input 
+                type="text" 
+                name="txid" 
+                value="feec837ad9f70b8add2138d4513bfda660842baaad01d88af23868103fb0e1dc" 
+                placeholder=""
+            >
+        </div>
+
+        <div>
+            <label>Withdraw date/time:</label>
+            <input type="date" name="withdraw_date" value="" placeholder="">
+            <input type="time" step="1" name="withdraw_time" value="" placeholder="">
+        </div>
+    </div>
+</form>
+                
+           

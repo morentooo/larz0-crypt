@@ -1,0 +1,203 @@
+<form class="form" name="form">
+    <div class="section_select bot_section_select">
+        <label>Bot section:</label>
+        <select name="bot_section" onchange="changeBotSection()">
+            <option value='dashboard'>Trades</option>
+            <option value='settings'>Settings</option>
+        </select>
+    </div>
+
+    <div>
+        <label>Account:</label>
+        <select name="account">
+            <option value='adele'>Adele</option>
+            <option value='bill'>Bill</option>
+            <option value='phil'>Phil</option>
+            <option value='alex'>Alex</option>
+            <option value='emir'>Emir</option>
+            <option value='diego'>Diego</option>
+            <option value='mark'>Mark</option>
+        </select>
+    </div>
+
+    <!-- Форма ввода для дашборда бота -->
+    <div class="form_bot current" id="form_bot_dashboard">
+        <div>
+            <label>Selected ID:</label>
+            <input 
+                type="text"
+                name="selected_id_dashboard" 
+                id="selected_id_input" 
+                value="" 
+                placeholder="123456"
+            >
+            <button type="button" class="generate_id_btn" onclick="generateId()">Generate</button>
+        </div>
+
+        <div>
+            <label>Boosted:</label>
+            <select name="is_boosted">
+                <option value='no'>No</option>
+                <option value='yes'>Yes</option>
+            </select>
+        </div>
+
+        <div>
+            <label>Balance:</label>
+            <input type="text" name="balance" value="" placeholder="123.45">
+            <label>$</label>
+        </div>
+
+        <div>
+            <label>Total Profit (last week):</label>
+            <input type="text" name="prev_total_profit" value="" placeholder="123.45">
+            <label>$</label>
+        </div>
+        
+        <!-- Таблица с полями для ввода списка трейдов -->
+        <table class="form_table">
+            <tr>
+                <th>Date</th>
+                <th>TR</th>
+                <th>%</th>
+                <th>$</th>
+                <th>*</th>
+            </tr>
+            <tr>
+                <td><span id="date_1"></span></td>
+                <td><input type="text" class="bot_form_input" id="trades_1"></td>
+                <td><input type="text" class="bot_form_input" id="percentages_1"></td>
+                <td><input type="text" class="bot_form_input" id="profit_1"></td>
+                <td>
+                    <select name="day_part" id="rate_1">
+                        <option value='0.3'>0.3</option>
+                        <option value='0.6'>0.6</option>
+                        <option value='0.9'>0.9</option>
+                        <option value='1'>1</option>
+                    </select>
+                </td>
+                <td><button type="button" onclick="generateValues(1)">Generate</button></td>
+                <td><button type="button" onclick="clearTableInputs(1)">Clear</button></td>
+            </tr>
+            <tr>
+                <td><span id="date_2"></span></td>
+                <td><input type="text" class="bot_form_input" id="trades_2"></td>
+                <td><input type="text" class="bot_form_input" id="percentages_2"></td>
+                <td><input type="text" class="bot_form_input" id="profit_2"></td>
+                <td>
+                    <select name="day_part" id="rate_2">
+                        <option value='0.3'>0.3</option>
+                        <option value='0.6'>0.6</option>
+                        <option value='0.9'>0.9</option>
+                        <option value='1'>1</option>
+                    </select>
+                </td>
+                <td><button type="button" onclick="generateValues(2)">Generate</button></td>
+                <td><button type="button" onclick="clearTableInputs(2)">Clear</button></td>
+            </tr>
+            <tr>
+                <td><span id="date_3"></span></td>
+                <td><input type="text" class="bot_form_input" id="trades_3"></td>
+                <td><input type="text" class="bot_form_input"  id="percentages_3"></td>
+                <td><input type="text" class="bot_form_input" id="profit_3"></td>
+                <td>
+                    <select name="day_part" id="rate_3">
+                        <option value='0.3'>0.3</option>
+                        <option value='0.6'>0.6</option>
+                        <option value='0.9'>0.9</option>
+                        <option value='1'>1</option>
+                    </select>
+                </td>
+                <td><button type="button" onclick="generateValues(3)">Generate</button></td>
+                <td><button type="button" onclick="clearTableInputs(3)">Clear</button></td>
+            </tr>
+            <tr>
+                <td><span id="date_4"></span></td>
+                <td><input type="text" class="bot_form_input" id="trades_4"></td>
+                <td><input type="text" class="bot_form_input" id="percentages_4"></td>
+                <td><input type="text" class="bot_form_input" id="profit_4"></td>
+                <td>
+                    <select name="day_part" id="rate_4">
+                        <option value='0.3'>0.3</option>
+                        <option value='0.6'>0.6</option>
+                        <option value='0.9'>0.9</option>
+                        <option value='1'>1</option>
+                    </select>
+                </td>
+                <td><button type="button" onclick="generateValues(4)">Generate</button></td>
+                <td><button type="button" onclick="clearTableInputs(4)">Clear</button></td>
+            </tr>
+            <tr>
+                <td><span id="date_5"></span></td>
+                <td><input type="text" class="bot_form_input" id="trades_5"></td>
+                <td><input type="text" class="bot_form_input" id="percentages_5"></td>
+                <td><input type="text" class="bot_form_input" id="profit_5"></td>
+                <td>
+                    <select name="day_part" id="rate_5">
+                        <option value='0.3'>0.3</option>
+                        <option value='0.6'>0.6</option>
+                        <option value='0.9'>0.9</option>
+                        <option value='1'>1</option>
+                    </select>
+                </td>
+                <td><button type="button" onclick="generateValues(5)">Generate</button></td>
+                <td><button type="button" onclick="clearTableInputs(5)">Clear</button></td>
+            </tr>
+            <tr>
+                <td><span id="date_6"></span></td>
+                <td><input type="text" class="bot_form_input" id="trades_6"></td>
+                <td><input type="text" class="bot_form_input" id="percentages_6"></td>
+                <td><input type="text" class="bot_form_input" id="profit_6"></td>
+                <td>
+                    <select name="day_part" id="rate_6">
+                        <option value='0.3'>0.3</option>
+                        <option value='0.6'>0.6</option>
+                        <option value='0.9'>0.9</option>
+                        <option value='1'>1</option>
+                    </select>
+                </td>
+                <td><button type="button" onclick="generateValues(6)">Generate</button></td>
+                <td><button type="button" onclick="clearTableInputs(6)">Clear</button></td>
+            </tr>
+            <tr>
+                <td><span id="date_7"></span></td>
+                <td><input type="text" class="bot_form_input" id="trades_7"></td>
+                <td><input type="text" class="bot_form_input" id="percentages_7"></td>
+                <td><input type="text" class="bot_form_input" id="profit_7"></td>
+                <td>
+                    <select name="day_part" id="rate_7">
+                        <option value='0.3'>0.3</option>
+                        <option value='0.6'>0.6</option>
+                        <option value='0.9'>0.9</option>
+                        <option value='1'>1</option>
+                    </select>
+                </td>
+                <td><button type="button" onclick="generateValues(7)">Generate</button></td>
+                <td><button type="button" onclick="clearTableInputs(7)">Clear</button></td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Форма ввода для страницы настроек бота -->
+    <div class="form_bot" id="form_bot_settings">
+        <div>
+            <label>Selected ID:</label>
+            <input 
+                type="text" 
+                name="selected_id_settings" 
+                id = "selected_id_input" 
+                placeholder="123456"
+                value = ""
+            >
+            <button type="button" class="generate_id_btn" onclick="generateId()">Generate</button>
+        </div>
+        <div>
+            <label>Deposit address:</label>
+            <input type="text" name="deposit_address" value="">
+        </div>
+        <div>
+            <label>Withdrawal address:</label>
+            <input type="text" name="withdrawal_address" value="">
+        </div>
+    </div>
+</form>               

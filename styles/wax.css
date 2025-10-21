@@ -1,0 +1,196 @@
+body {
+    overflow: hidden;
+}
+
+
+
+/* ---- ЛЭЙАУТЫ СКРИНОВ ---- */
+.waxp_images {
+    position: relative;
+    float: none;
+    top: 150vh;
+}
+
+.waxp_image_withdraw, 
+.waxp_image_progress{
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.waxp_image_withdraw.current, 
+.waxp_image_progress.current {
+    display: block;
+}
+
+.waxp_image_withdraw_form, 
+.waxp_image_withdraw_details, 
+.waxp_image_email {
+    position: relative;
+    width: 1170px;
+    background-position: center;
+}
+
+.waxp_image_withdraw_form {
+    height: 2532px;
+    margin-bottom: 100px;
+    background-image: url("../images/waxp/withdraw-test.PNG");
+    color: #fff;
+    font-family: "IBM Plex Sans", sans-serif;
+}
+
+.waxp_image_withdraw_details {
+    height: 1209;
+    margin-bottom: 100px;
+    background-image: url("../images/waxp/details-test.PNG");
+    color: #fff;
+    font-family: "IBM Plex Sans", sans-serif;
+}
+
+.waxp_image_email {
+    height: 1103px;
+    background-image: url("../images/waxp/email-test.PNG");
+    color: #D4D5D8;
+    font-family: "Inter", sans-serif;
+}
+
+
+
+/* ---- КОНФИГУРАЦИЯ И РАСПОЛОЖЕНИЕ ЭЛЕМЕНТОВ ---- */
+.address_iphone,
+.memo_iphone,
+.iphone_amount,
+.iphone_total_amount,
+.iphone_available_1,
+.iphone_available_2, 
+.details_amount,
+.details_datetime,
+.details_address,
+.email_amount,
+.email_address,
+.email_memo {
+    position: absolute;
+}
+
+/* ---- ФОРМА ВЫВОДА (на экране айфона) ---- */
+.address_iphone {
+    top: 582px;
+    left: 81px;
+    font-size: 37px;
+    font-weight: 500;
+    letter-spacing: 0.95;
+}
+
+.memo_iphone {
+    top: 1197px;
+    left: 87px;
+    font-size: 37px;
+    font-weight: 500;
+    letter-spacing: 0.1;
+}
+
+.iphone_amount {
+    top: 1815px;
+    left: 87px;
+    font-size: 37px;
+    font-weight: 500;
+    letter-spacing: 0.1;
+}
+
+.iphone_available_1 {
+    top: 1688px;
+    right: 114px;
+    font-size: 37px;
+    font-weight: 400;
+    letter-spacing: 0;
+}
+
+.iphone_available_2 {
+    top: 1955px;
+    right: 48px;
+    font-size: 37px;
+    font-weight: 400;
+    letter-spacing: 0;
+}
+
+.iphone_total_amount {
+    top: 2318px;
+    left: 48px;
+    font-size: 42px;
+    font-weight: 500;
+    letter-spacing: 0.3;
+}
+
+/* ---- ДЕТАЛИ ТРАНЗАКЦИИ ---- */
+.details_amount {
+    top: 311px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    font-size: 54px;
+    font-weight: 500;
+    letter-spacing: -0.5;
+}
+
+.details_datetime {
+    top: 898px;
+    right: 48px;
+    font-size: 37px;
+    font-weight: 400;
+    letter-spacing: 0.15;
+}
+
+.details_address {
+    top: 992px;
+    right: 96px;
+    font-size: 37px;
+    font-weight: 400;
+    letter-spacing: 0.4;
+}
+
+/* ---- ПИСЬМО ---- */
+.email_amount {
+    top: 623px;
+    left: 602px;
+    font-size: 42px;
+    font-weight: 300;
+    letter-spacing: 1.8;
+}
+
+.email_address {
+    top: 909px;
+    left: 611px;
+    font-size: 43px;
+    font-weight: 300;
+    letter-spacing: 0.9;
+}
+
+.email_memo {
+    top: 1009px;
+    left: 170px;
+    font-size: 42px;
+    font-weight: 300;
+    letter-spacing: 2.2;
+}
+
+/* Картинка с процентами выполнения транзакции */
+.waxp_image_progress {
+    width: 1816px;
+    height: 587px;
+    background-image: url("../images/waxp/progress-test.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.progress_percentage {
+    position: absolute;
+    top: 232px;
+    left: 303px;
+    transform: translateX(-50%);
+    color: #fff;
+    font-family: "Open Sans", sans-serif;
+    font-size: 51px;
+    font-weight: 500;
+    letter-spacing: 1;
+}

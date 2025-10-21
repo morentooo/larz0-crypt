@@ -1,0 +1,211 @@
+body {
+    overflow: hidden;
+}
+
+
+
+.enter_data_btn {
+    background-color: orange;
+}
+
+/* тествый шаблон для подгонки */
+.iphone_screen {
+    background-image: url("../images/position/test-new.png");
+}
+
+
+.position {
+    width: 100%;
+    height: 925px;
+    padding: 0 66px 0 60px;
+    box-sizing: border-box;
+    border-radius: 30px;
+    color: #fff;
+}
+
+.position_header {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 749px;
+    left: 97px;
+}
+
+.coin_name {
+    font-size: 47px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.coin_name, 
+.longshort, 
+.leverage {
+    font-family: "IBM Plex Sans", sans-serif;
+}
+
+
+
+/* Иконка с цветовой индикацией типа позы Long или Short */
+.longshort {
+    display: inline-block;
+    height: 54px;
+    margin-left: 15px;
+    padding: 0 12px;
+    border-radius: 10px;
+    color: #20B26C;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 0.1px;
+    line-height: 54px;
+}
+
+
+
+/* Иконка отображающая размер плеча */
+.leverage {
+    display: inline-block;
+    height: 54px;
+    margin-left: 14px;
+    padding: 0 17px;
+    background-color: #2A251B;
+    border-radius: 10px;
+    color: #F7A601;
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 0.1px;
+    line-height: 54px;
+}
+
+
+
+.position_body {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+
+.position_body > span {
+    position: absolute;
+    right: 97px;
+    width: 100%;
+    text-align: right;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 35px;
+    font-weight: 400;
+    letter-spacing: 0.45px;
+}
+
+.position_size {
+    top: 893px;
+    color: #20B26C;
+}
+
+.entry_price {
+    top: 978px;
+}
+
+.mark_price {
+    top: 1064px;
+}
+
+.liq_price {
+    top: 1149px;
+    color: #F7A601;
+}
+
+.value {
+    top: 1235px;
+}
+
+.unr_pnl {
+    top: 1318px;
+    color: #20B26C;
+}
+
+.unr_pnl_rounded {
+    top: 1367px;
+    color: #20B26C;
+}
+
+.r_pnl {
+    top: 1451px;
+    color: #F15C60;
+}
+
+.r_pnl_rounded {
+    top: 1499px;
+    color: #F15C60;
+}
+
+.margin {
+    top: 1707px;
+}
+
+.mm {
+    top: 1803px;
+}
+
+
+/* Строка со значением тейка */
+.tp {
+    top: 1910px;
+    right: 156px !IMPORTANT;
+}
+
+/* Надпись загрушка при отсутствии указанного тейка*/
+.tp_plug {
+    opacity: 0;
+    top: 1910px;
+    right: 156px !IMPORTANT;
+    letter-spacing: 1px !IMPORTANT;
+}
+
+.tp > span {
+    position: absolute;
+}
+
+/* надпись + значение */
+.tp > span:nth-child(1) {
+    right: 362px;
+    letter-spacing: 0.7px;
+}
+
+/* Зеленое значение тейка */
+.tp > span:nth-child(1) > span:nth-child(2) {
+    margin-left: 2px;
+    color: #20B26C;
+}
+
+/* Слеш-разделитель */
+.tp > span:nth-child(2) {
+    right: 349px;
+    font-weight: 200;
+}
+
+/* Два красных тире */
+.tp > span:nth-child(3) {
+    right: 320px;
+    color: #F15C60;
+}
+
+/* Надпись Partial Position */
+.tp > span:nth-child(4) {
+    right: 0px;
+    letter-spacing: 0.9px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
